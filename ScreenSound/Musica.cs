@@ -3,7 +3,18 @@
     public string nome;
     public string artista;
     public int duracao;
-    public bool disponivel;
+    private bool disponivel;
+
+
+    public void setDisponivel(bool value)
+    {
+        disponivel = value;
+    }
+    public bool getDisponivel()
+    {
+        return disponivel;
+    }
+
 
     public void ExibirFichaTecnica()
     {
@@ -18,4 +29,5 @@
             Console.WriteLine("Adquira o plano Plus+");
         }
     }
+
 }
