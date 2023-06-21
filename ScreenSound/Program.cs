@@ -10,5 +10,7 @@ musica2.Artista = "System of A Down";
 musica2.Duracao = 176;
 musica2.Disponivel= false;
 
+Console.WriteLine(musica1.DescricaoResumida);
+Console.WriteLine(musica2.DescricaoResumida);
 musica1.ExibirFichaTecnica();
 musica2.ExibirFichaTecnica();
