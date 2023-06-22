@@ -1,18 +1,23 @@
-﻿Album albumDoQueen = new Album();
-albumDoQueen.Nome = "A night at the opera";
+﻿Banda queen = new Banda("Queen");
+Album albumDoQueen = new Album("A night at the opera");
 
-Musica musica1 = new Musica();
-musica1.Nome = "Love of my Life";
-musica1.Duracao = 213;
+Musica musica1 = new Musica(queen, "Love of my Life")
+{
+    Duracao = 213,
+    Disponivel = true,
+};
 
-Musica musica2 = new Musica();
-musica2.Nome = "Bohemian Rhapsody";
-musica2.Duracao = 354;
+Musica musica2 = new Musica(queen, "Bohemian Rhapsody")
+{
+    Duracao = 354,
+    Disponivel = false,
+};
 
 albumDoQueen.AdicionarMusica(musica1);
 albumDoQueen.AdicionarMusica(musica2);
 
-Banda queen = new Banda();
-queen.Nome = "Queen";
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
+
 queen.AdicionarAlbum(albumDoQueen);
 queen.ExibirDiscografia();
